@@ -55,7 +55,7 @@ export default function Languages() {
         >
           <div className="mb-3 flex items-center gap-2">
             <LanguagesIcon className="h-5 w-5 text-violet-400" />
-            <span className="font-mono text-sm text-violet-400">04</span>
+            <span className="font-mono text-sm text-violet-400">05</span>
           </div>
           <h2 className="mb-3 text-3xl font-bold text-white sm:text-4xl">
             Language Proficiency

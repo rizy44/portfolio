@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Education from './sections/Education';
 import DevOpsProjects from './sections/DevOpsProjects';
 import SecurityLabs from './sections/SecurityLabs';
 import CompetitionProjects from './sections/CompetitionProjects';
@@ -15,6 +16,7 @@ export default function App() {
         <DevOpsProjects />
         <SecurityLabs />
         <CompetitionProjects />
+        <Education />
         <Languages />
       </main>
       <Footer />
