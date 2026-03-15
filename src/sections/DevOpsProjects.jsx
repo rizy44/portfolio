@@ -38,6 +38,7 @@ export default function DevOpsProjects() {
               skills={project.skills}
               images={project.images}
               githubUrl={project.githubUrl}
+              reportLinks={project.reportLinks}
               highlights={project.highlights}
             />
           ))}

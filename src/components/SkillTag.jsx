@@ -33,6 +33,12 @@ const colorMap = {
   'NLP': 'bg-purple-500/15 text-purple-400 border-purple-500/25',
   'Deep Learning': 'bg-indigo-500/15 text-indigo-400 border-indigo-500/25',
   'RAG Systems': 'bg-cyan-500/15 text-cyan-400 border-cyan-500/25',
+  'Network Security': 'bg-sky-500/15 text-sky-400 border-sky-500/25',
+  'Firewall Design': 'bg-orange-500/15 text-orange-400 border-orange-500/25',
+  'WAF / IPS': 'bg-amber-500/15 text-amber-400 border-amber-500/25',
+  'SIEM': 'bg-violet-500/15 text-violet-400 border-violet-500/25',
+  'Red Team': 'bg-red-500/15 text-red-400 border-red-500/25',
+  'Blue Team': 'bg-blue-500/15 text-blue-400 border-blue-500/25',
 };
 
 const defaultColor = 'bg-slate-500/15 text-slate-400 border-slate-500/25';
