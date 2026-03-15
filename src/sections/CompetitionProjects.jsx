@@ -14,13 +14,13 @@ function CompetitionCard({ comp, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: index * 0.12 }}
-      className="group overflow-hidden rounded-xl border border-slate-800/60 bg-slate-900/50 transition-all duration-300 hover:border-slate-700/80 hover:shadow-lg hover:shadow-amber-500/5"
+      className="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:shadow-md dark:border-slate-800/60 dark:bg-slate-900/50 dark:hover:border-slate-700/80 dark:hover:shadow-amber-500/5"
     >
       {/* Header with role & result */}
-      <div className="flex flex-wrap items-center gap-3 border-b border-slate-800/40 px-5 py-4">
-        <h3 className="text-lg font-semibold text-white">{comp.title}</h3>
+      <div className="flex flex-wrap items-center gap-3 border-b border-slate-200 px-5 py-4 dark:border-slate-800/40">
+        <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{comp.title}</h3>
         {comp.subtitle && (
-          <span className="rounded bg-slate-800 px-2 py-0.5 text-xs text-slate-400">
+          <span className="rounded bg-slate-100 px-2 py-0.5 text-xs text-slate-600 dark:bg-slate-800 dark:text-slate-400">
             {comp.subtitle}
           </span>
         )}
@@ -33,20 +33,20 @@ function CompetitionCard({ comp, index }) {
             <Users className="h-3.5 w-3.5" />
             {comp.role}
           </span>
-          <span className={`inline-flex items-center gap-1.5 rounded-lg bg-slate-800/80 px-3 py-1.5 text-xs font-bold ring-1 ring-slate-700/50 ${comp.resultColor}`}>
+          <span className={`inline-flex items-center gap-1.5 rounded-lg bg-slate-100 px-3 py-1.5 text-xs font-bold ring-1 ring-slate-200 dark:bg-slate-800/80 dark:ring-slate-700/50 ${comp.resultColor}`}>
             <Award className="h-3.5 w-3.5" />
             {comp.result}
           </span>
         </div>
 
         {comp.project && (
-          <div className="mb-3 rounded-lg bg-slate-800/40 px-3 py-2">
+          <div className="mb-3 rounded-lg bg-slate-50 px-3 py-2 dark:bg-slate-800/40">
             <p className="text-xs text-slate-500">Project</p>
-            <p className="text-sm font-medium text-slate-200">{comp.project}</p>
+            <p className="text-sm font-medium text-slate-800 dark:text-slate-200">{comp.project}</p>
           </div>
         )}
 
-        <p className="mb-4 text-sm leading-relaxed text-slate-400">{comp.description}</p>
+        <p className="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{comp.description}</p>
 
         {/* Image gallery */}
         {validImages.length > 0 && (
@@ -56,7 +56,7 @@ function CompetitionCard({ comp, index }) {
                 key={i}
                 src={src}
                 alt={`${comp.title} ${i + 1}`}
-                className={`w-full rounded-lg border border-slate-700/50 object-cover ${
+                className={`w-full rounded-lg border border-slate-200 object-cover dark:border-slate-700/50 ${
                   validImages.length === 3 && i === 0 ? 'col-span-2' : ''
                 }`}
                 onError={() =>
@@ -80,7 +80,7 @@ function CompetitionCard({ comp, index }) {
             href={comp.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-800/50 px-3 py-1.5 text-xs font-medium text-slate-300 transition-all hover:border-slate-600 hover:bg-slate-700/50 hover:text-white"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 transition-all hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-800/50 dark:text-slate-300 dark:hover:border-slate-600 dark:hover:bg-slate-700/50 dark:hover:text-white"
           >
             <Github className="h-3.5 w-3.5" />
             Source Code
@@ -103,13 +103,13 @@ export default function CompetitionProjects() {
           className="mb-12"
         >
           <div className="mb-3 flex items-center gap-2">
-            <Trophy className="h-5 w-5 text-amber-400" />
-            <span className="font-mono text-sm text-amber-400">03</span>
+            <Trophy className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+            <span className="font-mono text-sm text-amber-600 dark:text-amber-400">03</span>
           </div>
-          <h2 className="mb-3 text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="mb-3 text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
             Competitions
           </h2>
-          <p className="max-w-2xl text-slate-400">
+          <p className="max-w-2xl text-slate-600 dark:text-slate-400">
             Cybersecurity competitions, hackathons, and technical challenges —
             consistently leading teams and delivering solutions under pressure.
           </p>

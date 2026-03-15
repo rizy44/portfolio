@@ -43,7 +43,7 @@ export default function Languages() {
 
   return (
     <section id="languages" className="relative py-24">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-200/50 to-transparent dark:via-slate-900/30" />
 
       <div ref={ref} className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -54,10 +54,10 @@ export default function Languages() {
           className="mb-12"
         >
           <div className="mb-3 flex items-center gap-2">
-            <LanguagesIcon className="h-5 w-5 text-violet-400" />
-            <span className="font-mono text-sm text-violet-400">05</span>
+            <LanguagesIcon className="h-5 w-5 text-violet-600 dark:text-violet-400" />
+            <span className="font-mono text-sm text-violet-600 dark:text-violet-400">05</span>
           </div>
-          <h2 className="mb-3 text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="mb-3 text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
             Language Proficiency
           </h2>
         </motion.div>
@@ -70,11 +70,11 @@ export default function Languages() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="rounded-xl border border-slate-800/60 bg-slate-900/50 p-6"
+              className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800/60 dark:bg-slate-900/50"
             >
               <div className="mb-4 flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-white">{lang.name}</h3>
-                <span className="rounded-md bg-slate-800 px-3 py-1 text-sm font-medium text-slate-300">
+                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{lang.name}</h3>
+                <span className="rounded-md bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-300">
                   {lang.level}
                 </span>
               </div>
@@ -88,12 +88,12 @@ export default function Languages() {
 
               {lang.score && (
                 <div className="mt-3 flex items-baseline gap-1">
-                  <span className="text-3xl font-bold text-white">{lang.score}</span>
+                  <span className="text-3xl font-bold text-slate-900 dark:text-white">{lang.score}</span>
                   <span className="text-sm text-slate-500">/ 9.0</span>
                 </div>
               )}
 
-              <p className="mt-3 text-sm leading-relaxed text-slate-400">
+              <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
                 {lang.description}
               </p>
             </motion.div>

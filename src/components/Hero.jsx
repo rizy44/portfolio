@@ -27,10 +27,10 @@ export default function Hero() {
       className="relative flex min-h-screen items-center justify-center overflow-hidden"
     >
       {/* Background layers */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-[#0a1628] to-slate-950" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-100 via-white to-slate-100 dark:from-slate-950 dark:via-[#0a1628] dark:to-slate-950" />
       <div className="bg-grid-pattern absolute inset-0" />
-      <div className="absolute top-1/4 -left-32 h-96 w-96 rounded-full bg-cyan-500/5 blur-3xl" />
-      <div className="absolute -right-32 bottom-1/4 h-96 w-96 rounded-full bg-violet-500/5 blur-3xl" />
+      <div className="absolute top-1/4 -left-32 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl dark:bg-cyan-500/5" />
+      <div className="absolute -right-32 bottom-1/4 h-96 w-96 rounded-full bg-violet-400/10 blur-3xl dark:bg-violet-500/5" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 py-32 sm:px-6 lg:px-8">
         <div className="flex flex-col-reverse items-center gap-12 lg:flex-row lg:items-center lg:gap-16">
@@ -38,14 +38,14 @@ export default function Hero() {
           <motion.div variants={container} initial="hidden" animate="show" className="flex-1">
             {/* Terminal-style tag */}
             <motion.div variants={item} className="mb-6 flex items-center gap-2">
-              <Terminal className="h-4 w-4 text-cyan-400" />
-              <span className="font-mono text-sm text-cyan-400">~/security-engineer</span>
+              <Terminal className="h-4 w-4 text-cyan-600 dark:text-cyan-400" />
+              <span className="font-mono text-sm text-cyan-600 dark:text-cyan-400">~/security-engineer</span>
             </motion.div>
 
             {/* Name */}
             <motion.h1
               variants={item}
-              className="mb-4 text-4xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl"
+              className="mb-4 text-4xl font-black tracking-tight text-slate-900 sm:text-6xl lg:text-7xl dark:text-white"
             >
               Tran Gia Bao
             </motion.h1>
@@ -55,17 +55,17 @@ export default function Hero() {
               variants={item}
               className="mb-6 text-lg font-medium sm:text-xl lg:text-2xl"
             >
-              <span className="text-cyan-400">Security Engineer</span>
-              <span className="mx-3 text-slate-600">|</span>
-              <span className="text-emerald-400">DevSecOps</span>
-              <span className="mx-3 text-slate-600">|</span>
-              <span className="text-violet-400">Cloud Security</span>
+              <span className="text-cyan-600 dark:text-cyan-400">Security Engineer</span>
+              <span className="mx-3 text-slate-400 dark:text-slate-600">|</span>
+              <span className="text-emerald-600 dark:text-emerald-400">DevSecOps</span>
+              <span className="mx-3 text-slate-400 dark:text-slate-600">|</span>
+              <span className="text-violet-600 dark:text-violet-400">Cloud Security</span>
             </motion.p>
 
             {/* Description */}
             <motion.p
               variants={item}
-              className="mb-4 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg"
+              className="mb-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400"
             >
               I build secure cloud infrastructure and automation systems that detect
               security risks before they become incidents.
@@ -73,7 +73,7 @@ export default function Hero() {
 
             <motion.p
               variants={item}
-              className="mb-8 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base"
+              className="mb-8 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base dark:text-slate-500"
             >
               Passionate about bridging security and operations — from designing
               SOAR platforms and IaC pipelines on OpenStack to hands-on CTF
@@ -90,9 +90,9 @@ export default function Hero() {
                   href={href}
                   target={href.startsWith('mailto') ? undefined : '_blank'}
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-2 rounded-lg border border-slate-700/60 bg-slate-800/40 px-4 py-2.5 text-sm font-medium text-slate-300 transition-all hover:border-cyan-500/40 hover:bg-slate-800/80 hover:text-white"
+                  className="group flex items-center gap-2 rounded-lg border border-slate-300 bg-slate-100/80 px-4 py-2.5 text-sm font-medium text-slate-700 transition-all hover:border-cyan-400 hover:bg-slate-200/80 hover:text-slate-900 dark:border-slate-700/60 dark:bg-slate-800/40 dark:text-slate-300 dark:hover:border-cyan-500/40 dark:hover:bg-slate-800/80 dark:hover:text-white"
                 >
-                  <Icon className="h-4 w-4 transition-colors group-hover:text-cyan-400" />
+                  <Icon className="h-4 w-4 transition-colors group-hover:text-cyan-600 dark:group-hover:text-cyan-400" />
                   <span className="hidden sm:inline">{label}</span>
                 </a>
               ))}
@@ -107,11 +107,11 @@ export default function Hero() {
             className="shrink-0"
           >
             <div className="relative">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-cyan-500/30 via-violet-500/20 to-emerald-500/30 blur-md" />
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-cyan-400/30 via-violet-400/20 to-emerald-400/30 blur-md dark:from-cyan-500/30 dark:via-violet-500/20 dark:to-emerald-500/30" />
               <img
                 src="/images/profile.jpg"
                 alt="Tran Gia Bao"
-                className="relative h-56 w-56 rounded-full border-2 border-slate-700/60 object-cover shadow-2xl sm:h-64 sm:w-64 lg:h-72 lg:w-72"
+                className="relative h-56 w-56 rounded-full border-2 border-slate-300 object-cover shadow-2xl dark:border-slate-700/60 sm:h-64 sm:w-64 lg:h-72 lg:w-72"
               />
             </div>
           </motion.div>
@@ -128,7 +128,7 @@ export default function Hero() {
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
           >
-            <ChevronDown className="h-5 w-5 text-slate-600" />
+            <ChevronDown className="h-5 w-5 text-slate-500 dark:text-slate-600" />
           </motion.div>
         </motion.div>
       </div>

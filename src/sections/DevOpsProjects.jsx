@@ -15,13 +15,13 @@ export default function DevOpsProjects() {
           className="mb-12"
         >
           <div className="mb-3 flex items-center gap-2">
-            <Cloud className="h-5 w-5 text-cyan-400" />
-            <span className="font-mono text-sm text-cyan-400">01</span>
+            <Cloud className="h-5 w-5 text-cyan-600 dark:text-cyan-400" />
+            <span className="font-mono text-sm text-cyan-600 dark:text-cyan-400">01</span>
           </div>
-          <h2 className="mb-3 text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="mb-3 text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
             DevOps & Cloud Engineering
           </h2>
-          <p className="max-w-2xl text-slate-400">
+          <p className="max-w-2xl text-slate-600 dark:text-slate-400">
             Infrastructure automation, security compliance platforms, and cloud-native
             deployment pipelines built on OpenStack with IaC best practices.
           </p>

@@ -4,7 +4,7 @@ export const competitions = [
     title: 'Net Challenge 2025',
     role: 'Team Lead',
     result: '4 / 256 teams',
-    resultColor: 'text-amber-400',
+    resultColor: 'text-amber-600 dark:text-amber-400',
     description:
       'National cybersecurity competition organized by UIT focusing on solving real-world security challenges including network analysis, system exploitation, and security engineering tasks. Led the team to rank 4th out of 256 competing teams nationwide.',
     skills: [
@@ -26,7 +26,7 @@ export const competitions = [
     subtitle: 'Age of Ainicorns',
     role: 'Team Lead',
     result: 'Top 5 — Track 2',
-    resultColor: 'text-cyan-400',
+    resultColor: 'text-cyan-600 dark:text-cyan-400',
     description:
       'Technology hackathon organized by VNPT focused on developing AI-driven solutions. Led the team to design and implement a prototype system within a limited development time, achieving Top 5 placement in Track 2.',
     skills: [
@@ -46,7 +46,7 @@ export const competitions = [
     subtitle: 'Hack2Hire',
     role: 'Team Lead',
     result: 'Participant',
-    resultColor: 'text-emerald-400',
+    resultColor: 'text-emerald-600 dark:text-emerald-400',
     project: 'Hybrid Cloud Infrastructure Automation Platform',
     githubUrl: 'https://github.com/rizy44/automation-iac-deploy-and-scaling-on-hybrid-cloud',
     description:

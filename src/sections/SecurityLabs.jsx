@@ -11,7 +11,7 @@ export default function SecurityLabs() {
 
   return (
     <section id="security-labs" className="relative py-24">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-200/50 to-transparent dark:via-slate-900/30" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -22,13 +22,13 @@ export default function SecurityLabs() {
           className="mb-12"
         >
           <div className="mb-3 flex items-center gap-2">
-            <FlaskConical className="h-5 w-5 text-emerald-400" />
-            <span className="font-mono text-sm text-emerald-400">02</span>
+            <FlaskConical className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
+            <span className="font-mono text-sm text-emerald-600 dark:text-emerald-400">02</span>
           </div>
-          <h2 className="mb-3 text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="mb-3 text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
             Security Labs & CTF
           </h2>
-          <p className="max-w-2xl text-slate-400">
+          <p className="max-w-2xl text-slate-600 dark:text-slate-400">
             Hands-on security research across forensics, reverse engineering, web
             exploitation, and binary analysis — demonstrating practical offensive
             and defensive skills.
@@ -49,8 +49,8 @@ export default function SecurityLabs() {
               onClick={() => setActive(cat)}
               className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
                 active === cat
-                  ? 'bg-emerald-500/15 text-emerald-400 ring-1 ring-emerald-500/30'
-                  : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-300'
+                  ? 'bg-emerald-500/15 text-emerald-600 ring-1 ring-emerald-500/30 dark:text-emerald-400'
+                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800/50 dark:hover:text-slate-300'
               }`}
             >
               {cat}
@@ -75,7 +75,7 @@ export default function SecurityLabs() {
         </div>
 
         {filtered.length === 0 && (
-          <div className="py-16 text-center text-slate-500">
+          <div className="py-16 text-center text-slate-500 dark:text-slate-500">
             No labs in this category yet — more coming soon.
           </div>
         )}
