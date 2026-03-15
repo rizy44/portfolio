@@ -115,9 +115,17 @@ export default function CompetitionProjects() {
           </p>
         </motion.div>
 
-        <div className="grid gap-6 lg:grid-cols-2">
-          {competitions.map((comp, i) => (
-            <CompetitionCard key={comp.id} comp={comp} index={i} />
+        <div className="grid gap-6 lg:grid-cols-2 lg:grid-rows-2">
+          {/* Left: Net Challenge 2025 only (spans 2 rows) */}
+          <div className="lg:row-span-2">
+            <CompetitionCard
+              comp={competitions[0]}
+              index={0}
+            />
+          </div>
+          {/* Right: VNPT AI & VPBank stacked */}
+          {competitions.slice(1, 3).map((comp, i) => (
+            <CompetitionCard key={comp.id} comp={comp} index={i + 1} />
           ))}
         </div>
       </div>

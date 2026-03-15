@@ -16,8 +16,8 @@ const item = {
 
 const socials = [
   { icon: Github, href: 'https://github.com/rizy44', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com/in/trangiabaoit', label: 'LinkedIn' },
-  { icon: Mail, href: 'mailto:trangiabaoit@gmail.com', label: 'Email' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/baotran-sec', label: 'LinkedIn' },
+  { icon: Mail, href: 'mailto:tommytran1312@gmail.com', label: 'Email' },
 ];
 
 export default function Hero() {

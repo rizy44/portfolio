@@ -3,7 +3,7 @@ export const projects = [
     id: 'secops-platform',
     title: 'SecOps Infrastructure Compliance & Monitoring Platform',
     description:
-      'A comprehensive SOAR (Security Orchestration, Automation, and Response) platform for OpenStack cloud environments. Provides automated security scanning with continuous detection of misconfigurations, AI-powered remediation suggestions using GPT-4, and a complete observability stack with Prometheus, Grafana, and Loki.',
+      'A comprehensive SOAR platform for OpenStack cloud environments. Provides automated security scanning with continuous detection of misconfigurations, AI-powered remediation suggestions using GPT-4, and a complete observability stack with Prometheus, Grafana, and Loki.',
     technologies: [
       'OpenStack',
       'Terraform',
@@ -27,7 +27,6 @@ export const projects = [
     images: ['/images/projects/secops/architecture.png'],
     highlights: [
       'Automated scans every 60s across Security Groups, API Endpoints, and OS Baselines',
-      'AI-powered remediation suggestions with OpenAI GPT-4 integration',
       'Pre-deploy IaC scanning pipeline with Checkov, Trivy, and ansible-lint',
       'Full observability stack: Prometheus + Grafana + Loki + Alertmanager',
       'Web dashboard with real-time findings display and approval workflow',
@@ -62,13 +61,12 @@ export const projects = [
       'Container Orchestration',
       'CI/CD',
     ],
-    images: ['/images/projects/juiceshop/architecture.png'],
+    images: ['/images/projects/juiceshop/scoreboard.png'],
     highlights: [
       'Gateway → Edge deployment model with network isolation',
       'HAProxy load balancing across multiple edge nodes',
       'Private Docker registry for secure image management',
-      'APT proxy (apt-cacher-ng) for efficient package caching',
-      'Automated Ansible inventory generation from Terraform outputs',
+      'APT proxy for efficient package caching',
     ],
     architecture: {
       overview: 'Browser → Gateway (HAProxy + Registry + APT Proxy) → Edge Nodes (Docker + Juice Shop)',
@@ -93,7 +91,7 @@ export const projects = [
       'Threat Analysis',
     ],
     githubUrl: 'https://github.com/rizy44/Hybrid-Cloud-IaC-Anomaly-Detection-System',
-    images: [],
+    images: ['/images/projects/misconfig/topo.png'],
     highlights: [
       'Real-time Infrastructure as Code anomaly detection',
       'Hybrid cloud environment support',

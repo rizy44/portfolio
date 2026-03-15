@@ -1,18 +1,19 @@
 import { useState } from 'react';
-import { Github, Linkedin, Mail, Copy, Check, Shield, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, Copy, Check, Shield, Heart } from 'lucide-react';
 
-const EMAIL = 'trangiabaoit@gmail.com';
+const EMAIL = 'tommytran1312@gmail.com';
 const GITHUB = 'https://github.com/rizy44';
-const LINKEDIN = 'https://linkedin.com/in/trangiabaoit';
+const LINKEDIN = 'https://www.linkedin.com/in/baotran-sec';
+const PHONE = '+84 888 944 945';
 
 export default function Footer() {
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState({ email: false, phone: false });
 
-  const copyEmail = async () => {
+  const copyToClipboard = async (text, key) => {
     try {
-      await navigator.clipboard.writeText(EMAIL);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      await navigator.clipboard.writeText(text);
+      setCopied((prev) => ({ ...prev, [key]: true }));
+      setTimeout(() => setCopied((prev) => ({ ...prev, [key]: false })), 2000);
     } catch {
       /* clipboard blocked */
     }
@@ -43,11 +44,32 @@ export default function Footer() {
                 {EMAIL}
               </a>
               <button
-                onClick={copyEmail}
+                onClick={() => copyToClipboard(EMAIL, 'email')}
                 className="rounded-md border border-slate-700 p-1.5 text-slate-400 transition-all hover:border-slate-600 hover:text-white"
                 title="Copy email"
               >
-                {copied ? (
+                {copied.email ? (
+                  <Check className="h-3.5 w-3.5 text-emerald-400" />
+                ) : (
+                  <Copy className="h-3.5 w-3.5" />
+                )}
+              </button>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <a
+                href={`tel:${PHONE.replace(/\s/g, '')}`}
+                className="flex items-center gap-2 text-sm text-slate-300 transition-colors hover:text-cyan-400"
+              >
+                <Phone className="h-4 w-4" />
+                {PHONE}
+              </a>
+              <button
+                onClick={() => copyToClipboard(PHONE, 'phone')}
+                className="rounded-md border border-slate-700 p-1.5 text-slate-400 transition-all hover:border-slate-600 hover:text-white"
+                title="Copy phone"
+              >
+                {copied.phone ? (
                   <Check className="h-3.5 w-3.5 text-emerald-400" />
                 ) : (
                   <Copy className="h-3.5 w-3.5" />
@@ -72,7 +94,7 @@ export default function Footer() {
               className="flex items-center gap-2 text-sm text-slate-300 transition-colors hover:text-cyan-400"
             >
               <Linkedin className="h-4 w-4" />
-              linkedin.com/in/trangiabaoit
+              linkedin.com/in/baotran-sec
             </a>
           </div>
         </div>
