@@ -62,6 +62,7 @@ export const projects = [
       'CI/CD',
     ],
     images: ['/images/projects/juiceshop/scoreboard.png'],
+    githubUrl: 'https://github.com/rizy44/Deploy-JuiceShop-with-ansible-and-terraform-on-Openstack',
     highlights: [
       'Gateway → Edge deployment model with network isolation',
       'HAProxy load balancing across multiple edge nodes',

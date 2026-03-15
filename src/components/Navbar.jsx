@@ -63,7 +63,7 @@ export default function Navbar() {
           className="flex items-center gap-2 text-lg font-bold text-white transition-colors hover:text-cyan-400"
         >
           <Shield className="h-5 w-5 text-cyan-400" />
-          <span>GiaBao</span>
+          <span>TranGiaBao-rizy44</span>
         </a>
 
         <div className="hidden items-center gap-1 md:flex">
